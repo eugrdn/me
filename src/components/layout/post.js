@@ -1,10 +1,10 @@
 import React from 'react';
 import {graphql} from 'gatsby';
 import styled from 'styled-components';
-import Article from '../components/article';
-import Link from '../components/nav-link';
-import SEO from '../components/seo';
-import Layout from '../layouts/default';
+import Article from '../article';
+import Link from '../nav-link';
+import SEO from '../seo';
+import Layout from './';
 
 export default ({
   data: {
@@ -17,9 +17,9 @@ export default ({
     <Article title={frontmatter.title} date={frontmatter.date} html={html} />
     <PageNavigation>
       {prev && <Link to={prev.fields.slug}>&lt;&lt;</Link>}
-      <span>&middot;</span>
+      <span>&nbsp;&middot;&nbsp;</span>
       <Link to="/">Home</Link>
-      <span>&middot;</span>
+      <span>&nbsp;&middot;&nbsp;</span>
       {next && <Link to={next.fields.slug}>&gt;&gt;</Link>}
     </PageNavigation>
   </Layout>
@@ -41,7 +41,6 @@ const PageNavigation = styled.div`
   text-align: center;
   max-width: 500px;
   margin: 50px auto 0;
-  font-size: 0.8rem;
   a {
     display: inline-block;
     text-decoration: none;

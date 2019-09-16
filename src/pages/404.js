@@ -2,9 +2,9 @@ import React from 'react';
 import {graphql} from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import Layout from '../components/layout';
 import Section from '../components/section';
 import SEO from '../components/seo';
-import Layout from '../layouts/default';
 
 export default ({data}) => (
   <Layout>
