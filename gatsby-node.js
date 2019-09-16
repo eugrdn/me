@@ -12,6 +12,8 @@ exports.createPages = ({actions: {createPage}, graphql}) =>
             }
             frontmatter {
               title
+              link
+              tags
             }
           }
         }
@@ -25,7 +27,7 @@ exports.createPages = ({actions: {createPage}, graphql}) =>
     posts.forEach(({node}, index) =>
       createPage({
         path: node.fields.slug,
-        component: path.resolve(`src/layouts/post.js`),
+        component: path.resolve('src/components/layout/post.js'),
         context: {
           slug: node.fields.slug,
           prev: index === 0 ? null : posts[index - 1].node,

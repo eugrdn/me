@@ -1,9 +1,9 @@
 import React from 'react';
 import {graphql, StaticQuery} from 'gatsby';
 import styled from 'styled-components';
-import Footer from '.././components/footer';
-import Header from '.././components/header';
-import GlobalStyle from '../styles/global';
+import GlobalStyle from '../../styles/global';
+import Footer from '../footer';
+import Header from '../header';
 
 export default ({children}) => (
   <StaticQuery

@@ -21,14 +21,14 @@ const Header = styled.div`
   text-align: center;
   margin: 0 auto;
   h1.title {
-    line-height: 1.4em;
+    line-height: 1.4rem;
     text-align: center;
-    font-size: 1.4em;
+    font-size: 1.4rem;
   }
 `;
 
 const Article = styled.article`
-  min-width: ${isMobile ? '200px' : '400px'};
+  min-width: ${isMobile ? '250px' : '400px'};
   max-width: 500px;
   margin: 0 auto;
   hr {
@@ -37,7 +37,6 @@ const Article = styled.article`
     margin: 30px 0;
   }
   p {
-    font-size: 15px;
     line-height: 1.9em;
     word-wrap: break-word;
   }

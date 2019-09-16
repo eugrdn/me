@@ -31,7 +31,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: `${__dirname}/static/images/`,
+        path: `${__dirname}/src/assets/images/`,
       },
     },
     'gatsby-transformer-sharp',
@@ -94,7 +94,15 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'markdown-pages',
-        path: `${__dirname}/src/pages/`,
+        path: `${__dirname}/src/pages/blog`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /icons/,
+        },
       },
     },
     {
@@ -112,7 +120,7 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'standalone',
-        icon: 'static/images/avatar.png',
+        icon: `${__dirname}/src/assets/images/avatar.png`,
       },
     },
     'gatsby-plugin-offline',

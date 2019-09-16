@@ -22,14 +22,14 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: -apple-system, Consolas, monaco, monospace, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 2vh;
   }
   body {
-    font-size: 14px;
     line-height: 20px;
     font-weight: normal;
     font-style: normal;
-    font-family: -apple-system, Consolas, monaco, monospace, BlinkMacSystemFont, 'Segoe UI', Roboto,
-      Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     color: #333333;
     padding: 0 20px;
     margin: 0;
