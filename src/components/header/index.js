@@ -34,7 +34,6 @@ const Header = styled.header`
   .gatsby-image-wrapper {
     height: 17vh;
     width: 17vh;
-    border-radius: 50%;
   }
 
   a {
@@ -42,7 +41,6 @@ const Header = styled.header`
     color: #000;
     text-decoration: none;
     font-weight: 700;
-    border-radius: 50%;
     display: inline-block;
     text-align: center;
     line-height: 100px;
@@ -52,5 +50,10 @@ const Header = styled.header`
     &:focus {
       background: #f14e32;
     }
+  }
+
+  a,
+  img {
+    border-radius: 50%;
   }
 `;
