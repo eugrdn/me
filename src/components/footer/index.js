@@ -1,17 +1,35 @@
 import React from 'react';
+import {StaticQuery, graphql} from 'gatsby';
 import styled from 'styled-components';
 
-export default ({author}) => (
-  <Footer>
-    <div>
-      &copy; {new Date().getFullYear()} <b>{author}</b>
-    </div>
-    <div>
-      <small>
-        Powered by <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </small>
-    </div>
-  </Footer>
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            author
+          }
+        }
+      }
+    `}
+    render={({
+      site: {
+        siteMetadata: {author},
+      },
+    }) => (
+      <Footer>
+        <div>
+          &copy; {new Date().getFullYear()} <b>{author}</b>
+        </div>
+        <div>
+          <small>
+            Powered by <a href="https://www.gatsbyjs.org">Gatsby</a>
+          </small>
+        </div>
+      </Footer>
+    )}
+  />
 );
 
 const Footer = styled.div`

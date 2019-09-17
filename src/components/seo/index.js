@@ -11,12 +11,13 @@ export default ({description = '', lang = 'en', meta = [], title}) => (
             title
             description
             social
+            avatar
           }
         }
       }
     `}
-    render={({site}) => {
-      const metaDescription = description || site.siteMetadata.description;
+    render={({site: {siteMetadata}}) => {
+      const metaDescription = description || siteMetadata.description;
 
       return (
         <Helmet
@@ -24,11 +25,15 @@ export default ({description = '', lang = 'en', meta = [], title}) => (
             lang,
           }}
           title={title}
-          titleTemplate={`%s | ${site.siteMetadata.title}`}
+          titleTemplate={`%s | ${siteMetadata.title}`}
           meta={[
             {
               name: 'description',
               content: metaDescription,
+            },
+            {
+              name: 'image',
+              content: siteMetadata.avatar
             },
             {
               property: 'og:title',
@@ -43,12 +48,16 @@ export default ({description = '', lang = 'en', meta = [], title}) => (
               content: 'website',
             },
             {
+              property: 'og:image',
+              content: siteMetadata.avatar,
+            },
+            {
               name: 'twitter:card',
               content: 'summary',
             },
             {
               name: 'twitter:creator',
-              content: site.siteMetadata.social,
+              content: siteMetadata.social,
             },
             {
               name: 'twitter:title',
@@ -57,6 +66,10 @@ export default ({description = '', lang = 'en', meta = [], title}) => (
             {
               name: 'twitter:description',
               content: metaDescription,
+            },
+            {
+              name: 'twitter:image',
+              content: siteMetadata.avatar,
             },
           ].concat(meta)}
         />
