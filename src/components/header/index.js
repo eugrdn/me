@@ -34,6 +34,7 @@ const Header = styled.header`
   .gatsby-image-wrapper {
     height: 17vh;
     width: 17vh;
+    border-radius: 50%;
   }
 
   a {

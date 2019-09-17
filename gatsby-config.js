@@ -4,7 +4,7 @@ module.exports = {
     description: 'Portfolio, blog, contact info',
     author: 'Evgeny Rodin',
     social: '@eugrdn',
-    avatar: '/images/avatar.png',
+    avatar: 'https://eugrdn.me/icons/icon-512x512.png',
     siteUrl: 'https://eugrdn.me',
   },
   plugins: [
@@ -120,7 +120,7 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'standalone',
-        icon: `${__dirname}/src/assets/images/avatar.png`,
+        icon: `${__dirname}/src/assets/images/icon.png`,
       },
     },
     'gatsby-plugin-offline',
