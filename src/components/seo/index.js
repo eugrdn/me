@@ -52,6 +52,10 @@ export default ({description = '', lang = 'en', meta = [], title}) => (
               content: siteMetadata.avatar,
             },
             {
+              property: 'og:image:secure_url',
+              content: siteMetadata.avatar,
+            },
+            {
               name: 'twitter:card',
               content: 'summary',
             },

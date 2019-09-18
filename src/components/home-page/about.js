@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserView, MobileView} from 'react-device-detect';
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 import Emoji from '../emoji';
 import Section from '../section';
 
@@ -64,7 +64,6 @@ const Info = styled.h4`
 const HeyEmoji = styled(Emoji)`
   display: inline-block;
   width: 40px;
-
   animation-iteration-count: 2;
   animation-duration: 0s;
   animation-name: wave-hand;
@@ -74,14 +73,6 @@ const HeyEmoji = styled(Emoji)`
   animation-iteration-count: 2;
   animation-direction: normal;
   animation-fill-mode: forwards;
-
-  ${props =>
-    props.rotate &&
-    css`
-      -webkit-transform: rotate(40deg);
-      -ms-transform: rotate(40deg);
-      transform: rotate(40deg);
-    `}
 
   @keyframes wave-hand {
     0% {
