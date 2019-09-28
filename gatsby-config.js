@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Evgeny Rodin site',
-    description: 'Portfolio, blog, contact info',
+    title: 'Evgeny Rodin',
+    description: 'Software Engineer. Portfolio, blog, contacts.',
     author: 'Evgeny Rodin',
     social: '@eugrdn',
     avatar: 'https://eugrdn.me/icons/icon-512x512.png',
@@ -57,8 +57,10 @@ module.exports = {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
+                  author: 'Evgeny Rodin',
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  categories: node.tags,
                   custom_elements: [{'content:encoded': edge.node.html}],
                 });
               });
@@ -114,8 +116,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Evgeny Rodin site',
-        short_name: 'Evgeny Rodin',
+        name: 'Evgeny Rodin',
+        short_name: 'Evgeny R.',
         start_url: '/',
         background_color: '#eec597',
         theme_color: '#eec597',
