@@ -21,9 +21,9 @@ const Header = styled.div`
   text-align: center;
   margin: 0 auto;
   h1.title {
-    line-height: 1.4rem;
+    line-height: 1.4em;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.4em;
   }
 `;
 

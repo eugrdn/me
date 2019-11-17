@@ -32,13 +32,12 @@ const Header = styled.header`
   text-align: center;
 
   .gatsby-image-wrapper {
-    height: 17vh;
-    width: 17vh;
+    min-width: 200px;
+    height: auto;
   }
 
   a {
     background: #ddd;
-    color: #000;
     text-decoration: none;
     font-weight: 700;
     display: inline-block;
@@ -55,5 +54,6 @@ const Header = styled.header`
   a,
   img {
     border-radius: 50%;
+    border: 0;
   }
 `;

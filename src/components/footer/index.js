@@ -33,7 +33,7 @@ export default () => (
 );
 
 const Footer = styled.div`
-  font-size: 0.8rem;
+  font-size: 0.8em;
   text-align: center;
   max-width: 500px;
   margin: 50px auto 5px;

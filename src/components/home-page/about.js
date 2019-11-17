@@ -8,7 +8,7 @@ const name = "I'm Evgeny";
 const jobTitle = 'Software Engineer';
 
 const RU = <Emoji symbol="🇷🇺" label="russia" fallback=" Russia." />;
-const Airplane = <Emoji symbol="✈️" label="airplane" fallback="." />;
+const Airplane = <Emoji symbol="🛫" label="airplane" fallback="." />;
 const Developer = <Emoji symbol="👨‍💻" label="developer" fallback="." />;
 
 export default () => (
@@ -42,22 +42,22 @@ const Container = styled(Section)`
 `;
 
 const Greeting = styled.h2`
-  font-size: 2rem;
-  letter-spacing: 0.1rem;
+  font-size: 2em;
+  letter-spacing: 0.1em;
   font-weight: 800;
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
 `;
 
 const JobTitle = styled.h4`
-  font-size: 1.3rem;
-  letter-spacing: 0.1rem;
+  font-size: 1.3em;
+  letter-spacing: 0.1em;
   font-weight: 800;
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
 `;
 
 const Info = styled.h4`
   color: #777;
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: normal;
 `;
 

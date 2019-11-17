@@ -30,6 +30,11 @@ const Contacts = styled(Section)`
   a {
     color: #000;
   }
+  @media (prefers-color-scheme: dark) {
+    a {
+      color: #ddd;
+    }
+  }
 `;
 
 const LinkList = styled.div`

@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default ({name, size = 20}) => {
+export default ({name}) => {
   const Icon = files[name];
   return (
-    <Link href={meta[name].to} target="_blank" rel="noopener noreferrer" size={size}>
+    <Link href={meta[name].to} target="_blank" rel="noopener noreferrer">
       <Icon />
     </Link>
   );
@@ -17,8 +17,8 @@ const Link = styled.a`
 
   svg {
     display: inline-block;
-    height: ${props => props.size}px;
-    width: ${props => props.size}px;
+    height: 1.2em;
+    width: 1.2em;
     path {
       fill: #777;
     }
@@ -26,6 +26,12 @@ const Link = styled.a`
 
   &:hover svg path {
     fill: black;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    &:hover svg path {
+      fill: #ddd;
+    }
   }
 `;
 

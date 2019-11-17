@@ -22,12 +22,10 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: -apple-system, Consolas, monaco, monospace, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    font-family: -apple-system, 'B612 Mono', Consolas, monaco, monospace, BlinkMacSystemFont, 'Segoe UI', Roboto,
       Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    font-size: 2vh;
   }
   body {
-    line-height: 20px;
     font-weight: normal;
     font-style: normal;
     color: #333333;
@@ -36,32 +34,47 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
   }
+  @media (min-width: 1200px) {
+    body {
+      font-size: 0.9em;
+    }
+  }
+  @media (min-width: 1900px) {
+    body {
+      font-size: 1.5em;
+    }
+  }
+  @media (min-width: 2600px) {
+    body {
+      font-size: 2em;
+    }
+  }
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
     line-height: 1.25;
     color: #313131;
   }
   h1 {
-    font-size: 2rem;
+    font-size: 2em;
   }
   h2 {
-    margin-top: 1rem;
-    font-size: 1.5rem;
+    margin-top: 1em;
+    font-size: 1.5em;
   }
   h3 {
-    margin-top: 1.5rem;
-    font-size: 1.25rem;
+    margin-top: 1.5em;
+    font-size: 1.25em;
   }
   h4,
   h5,
   h6 {
-    margin-top: 1.1rem;
-    font-size: 1.1rem;
+    margin-top: 1.1em;
+    font-size: 1.1em;
   }
   img {
     max-width: 100%;
@@ -77,6 +90,20 @@ export default createGlobalStyle`
       border: 0;
       border-radius: 5px;
       margin: 30px 0;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    body {
+      color: #ddd;
+      background-color: #222;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #ddd;
     }
   }
   mark {
@@ -128,14 +155,14 @@ export default createGlobalStyle`
   pre {
     display: block;
     margin-top: 0;
-    margin-bottom: 1rem;
-    font-size: 0.8rem;
+    margin-bottom: 1em;
+    font-size: 0.8em;
     line-height: 1.4;
     white-space: pre;
     overflow-x: auto;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
-    padding: 1rem;
+    padding: 1em;
     code {
       font-size: 100%;
       color: inherit;

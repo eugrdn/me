@@ -31,6 +31,14 @@ export default styled.section`
           }
         }
       }
+      @media (prefers-color-scheme: dark) {
+        a {
+          color: #ddd;
+          &:hover {
+            border-color: #ddd;
+          }
+        }
+      }
     }
   }
 `;

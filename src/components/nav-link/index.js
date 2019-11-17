@@ -16,4 +16,12 @@ export default styled(Link)`
       }
     }
   }
+  @media (prefers-color-scheme: dark) {
+    a {
+      color: #ddd;
+      &:hover {
+        border-color: #ddd;
+      }
+    }
+  }
 `;
