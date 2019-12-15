@@ -8,6 +8,7 @@ export default styled(Link)`
     color: #000;
     box-sizing: border-box;
   }
+
   @media (min-width: 992px) {
     a {
       border-bottom: 2px solid transparent;
@@ -16,6 +17,7 @@ export default styled(Link)`
       }
     }
   }
+
   @media (prefers-color-scheme: dark) {
     a {
       color: #ddd;

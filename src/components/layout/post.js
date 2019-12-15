@@ -1,29 +1,10 @@
 import React from 'react';
 import {graphql} from 'gatsby';
-import styled from 'styled-components';
 import Article from '../article';
 import Link from '../nav-link';
 import SEO from '../seo';
-import Layout from './';
-
-export default ({
-  data: {
-    markdownRemark: {frontmatter, html},
-  },
-  pageContext: {next, prev},
-}) => (
-  <Layout>
-    <SEO title={frontmatter.title} />
-    <Article title={frontmatter.title} date={frontmatter.date} html={html} />
-    <PageNavigation>
-      {prev && <Link to={prev.fields.slug}>&lt;&lt;</Link>}
-      <span>&nbsp;&middot;&nbsp;</span>
-      <Link to="/">Home</Link>
-      <span>&nbsp;&middot;&nbsp;</span>
-      {next && <Link to={next.fields.slug}>&gt;&gt;</Link>}
-    </PageNavigation>
-  </Layout>
-);
+import {PageLayout} from './';
+import {PageNavigation} from './atoms';
 
 export const pageQuery = graphql`
   query($slug: String!) {
@@ -37,16 +18,21 @@ export const pageQuery = graphql`
   }
 `;
 
-const PageNavigation = styled.div`
-  text-align: center;
-  max-width: 500px;
-  margin: 50px auto 0;
-  a {
-    display: inline-block;
-    text-decoration: none;
-    border-bottom: none;
-  }
-  span {
-    display: inline-block;
-  }
-`;
+export default ({
+  data: {
+    markdownRemark: {frontmatter, html},
+  },
+  pageContext: {next, prev},
+}) => (
+  <PageLayout>
+    <SEO title={frontmatter.title} />
+    <Article title={frontmatter.title} date={frontmatter.date} html={html} />
+    <PageNavigation>
+      {prev && <Link to={prev.fields.slug}>&lt;&lt;</Link>}
+      <span>&nbsp;&middot;&nbsp;</span>
+      <Link to="/">Home</Link>
+      <span>&nbsp;&middot;&nbsp;</span>
+      {next && <Link to={next.fields.slug}>&gt;&gt;</Link>}
+    </PageNavigation>
+  </PageLayout>
+);

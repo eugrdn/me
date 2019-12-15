@@ -158,6 +158,8 @@ To https://git.heroku.com/react-socket-example.git
  * [new branch] master -> master
 ```
 
+Deploy is done!
+
 Well, all that remains is to open the app
 
 ```bash
@@ -166,4 +168,4 @@ heroku open
 
 ![Demo](/blog/react-socketio-heroku/demo.gif)
 
-Your browser will open the app automatically. Deploy is done!
+Your browser will open the app automatically.

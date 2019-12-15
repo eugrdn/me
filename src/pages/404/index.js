@@ -2,19 +2,9 @@ import React from 'react';
 import {graphql} from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
-import Layout from '../components/layout';
-import Section from '../components/section';
-import SEO from '../components/seo';
-
-export default ({data}) => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <Container>
-      <p>You just hit a route that doesn't exist... the sadness.</p>
-      <Img fluid={data.file.childImageSharp.fluid} />
-    </Container>
-  </Layout>
-);
+import {PageLayout} from '../../components/layout';
+import Section from '../../components/section';
+import SEO from '../../components/seo';
 
 export const query = graphql`
   query {
@@ -27,6 +17,16 @@ export const query = graphql`
     }
   }
 `;
+
+export default ({data}) => (
+  <PageLayout>
+    <SEO title="404: Not found" />
+    <Container>
+      <p>You just hit a route that doesn't exist... the sadness.</p>
+      <Img fluid={data.file.childImageSharp.fluid} />
+    </Container>
+  </PageLayout>
+);
 
 const Container = styled(Section)`
   text-align: center;
