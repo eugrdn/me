@@ -43,7 +43,6 @@ const meta = {
   telegram: {to: 'https://t.me/eugrdn'},
   instagram: {to: 'https://www.instagram.com/eugrdn'},
   twitter: {to: 'https://twitter.com/eugrdn'},
-  medium: {to: 'https://medium.com/@eugrdn'},
   goodreads: {to: 'https://goodreads.com/eugrdn'},
 };
 

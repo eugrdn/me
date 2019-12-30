@@ -12,7 +12,6 @@ exports.createPages = ({actions: {createPage}, graphql}) =>
             }
             frontmatter {
               title
-              link
               tags
             }
           }

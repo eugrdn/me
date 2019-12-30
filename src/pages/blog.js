@@ -1,16 +1,16 @@
 import React from 'react';
-import {graphql} from 'gatsby';
+import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import Article from '../components/article';
 import Layout from '../components/layout';
 import Link from '../components/nav-link';
 import Section from '../components/section';
 import SEO from '../components/seo';
-import {getDateDay, getDateYear} from '../utils';
+import { getDateDay, getDateYear } from '../utils';
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           id
@@ -20,7 +20,6 @@ export const query = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            link
             tags
           }
         }
@@ -31,7 +30,7 @@ export const query = graphql`
 
 export default ({
   data: {
-    allMarkdownRemark: {edges},
+    allMarkdownRemark: { edges },
   },
 }) => (
   <Layout>
@@ -74,8 +73,8 @@ const createPostList = posts => (
 const Post = ({
   post: {
     node: {
-      frontmatter: {date, link, title},
-      fields: {slug},
+      frontmatter: { date, title },
+      fields: { slug },
     },
   },
 }) => (
@@ -84,13 +83,7 @@ const Post = ({
       <small>{getDateDay(date)}</small>
     </PostDate>
     <div>
-      {link ? (
-        <a href={link} rel="noopener noreferrer">
-          {title}
-        </a>
-      ) : (
-        <Link to={slug}>{title}</Link>
-      )}
+      <Link to={slug}>{title}</Link>
     </div>
   </li>
 );
