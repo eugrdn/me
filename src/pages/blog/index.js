@@ -1,16 +1,15 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import {graphql} from 'gatsby';
 import styled from 'styled-components';
-import Article from '../components/article';
-import Layout from '../components/layout';
-import Link from '../components/nav-link';
-import Section from '../components/section';
-import SEO from '../components/seo';
-import { getDateDay, getDateYear } from '../utils';
+import Article from '../../components/article';
+import {PageLayout} from '../../components/layout';
+import Link from '../../components/nav-link';
+import Section from '../../components/section';
+import SEO from '../../components/seo';
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
       edges {
         node {
           id
@@ -30,14 +29,14 @@ export const query = graphql`
 
 export default ({
   data: {
-    allMarkdownRemark: { edges },
+    allMarkdownRemark: {edges},
   },
 }) => (
-  <Layout>
+  <PageLayout>
     <SEO title="Blog" />
     <Article title="Blog" />
     <Section>{createPostList(edges)}</Section>
-  </Layout>
+  </PageLayout>
 );
 
 const createPostList = posts => (
@@ -73,8 +72,8 @@ const createPostList = posts => (
 const Post = ({
   post: {
     node: {
-      frontmatter: { date, title },
-      fields: { slug },
+      frontmatter: {date, title},
+      fields: {slug},
     },
   },
 }) => (
@@ -87,6 +86,13 @@ const Post = ({
     </div>
   </li>
 );
+
+const getDateYear = dateStr => new Date(dateStr).getFullYear();
+
+const getDateDay = dateStr => {
+  const date = new Date(dateStr);
+  return `${date.toLocaleString('default', {month: 'long'})}, ${date.getDate()}`;
+};
 
 const PostDate = styled.div`
   float: right;

@@ -1,28 +1,33 @@
 import React from 'react';
-import styled from 'styled-components';
 import GlobalStyle from '../../styles/global';
+import {useForceRepaint} from '../../styles/repaint';
 import Footer from '../footer';
 import Header from '../header';
+import * as Atoms from './atoms';
 
-export default ({children}) => (
-  <>
-    <GlobalStyle />
-    <Container>
-      <Header />
-      <Content>{children}</Content>
-      <Footer />
-    </Container>
-  </>
+const Root = ({children}) => {
+  useForceRepaint();
+
+  return (
+    <>
+      <GlobalStyle />
+      <Atoms.FullScreen>{children}</Atoms.FullScreen>
+    </>
+  );
+};
+
+export const PageLayout = ({children}) => (
+  <Root>
+    <Header />
+    <Atoms.Content>{children}</Atoms.Content>
+    <Footer />
+  </Root>
 );
 
-const Container = styled.div`
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-`;
-
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-`;
+// home page widescreen
+export const HPWLayout = ({children}) => (
+  <Root>
+    <Atoms.HPWContent>{children}</Atoms.HPWContent>
+    <Atoms.HPWFooter />
+  </Root>
+);

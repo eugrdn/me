@@ -2,7 +2,7 @@
   "name": "site",
   "private": true,
   "description": "Portfolio, blog, contact info",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Evgeny Rodin",
   "dependencies": {
     "babel-plugin-styled-components": "1.10.6",
@@ -45,7 +45,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
+    "start": "NODE_ENV=development npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },

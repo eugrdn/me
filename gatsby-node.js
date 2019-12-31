@@ -47,3 +47,22 @@ exports.onCreateNode = ({node, actions, getNode}) => {
     });
   }
 };
+
+exports.onCreatePage = ({page, actions}) => {
+  const {deletePage, createPage} = actions;
+
+  return new Promise(resolve => {
+    if (~page.componentPath.indexOf('/src/pages/index/')) {
+      deletePage(page);
+    }
+
+    if (page.componentPath === `${__dirname}/src/pages/index/index.js`) {
+      createPage({
+        ...page,
+        path: '/',
+      });
+    }
+
+    resolve();
+  });
+};
