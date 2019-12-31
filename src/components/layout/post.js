@@ -28,11 +28,11 @@ export default ({
     <SEO title={frontmatter.title} />
     <Article title={frontmatter.title} date={frontmatter.date} html={html} />
     <PageNavigation>
-      {prev && <Link to={prev.fields.slug}>&lt;&lt;</Link>}
+      {prev && <Link to={`/blog/${prev.fields.slug}`}>&lt;&lt;</Link>}
       <span>&nbsp;&middot;&nbsp;</span>
       <Link to="/">Home</Link>
       <span>&nbsp;&middot;&nbsp;</span>
-      {next && <Link to={next.fields.slug}>&gt;&gt;</Link>}
+      {next && <Link to={`/blog/${next.fields.slug}`}>&gt;&gt;</Link>}
     </PageNavigation>
   </PageLayout>
 );
