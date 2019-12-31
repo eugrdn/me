@@ -29,7 +29,7 @@ export default createGlobalStyle`
 
   @media (min-width: 1200px) {
     body {
-      font-size: 0.9em;
+      font-size: 1em;
     }
   }
 
