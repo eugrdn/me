@@ -32,6 +32,23 @@ export const Info = styled.h4`
   font-weight: normal;
 `;
 
+export const LocationEmoji = styled(Emoji)`
+  -webkit-animation: blink-text 1s linear infinite;
+  animation: blink-text 1s linear infinite;
+
+  @-webkit-keyframes blink-text {
+    100% {
+      color: rgba(34, 34, 34, 0);
+    }
+  }
+
+  @keyframes blink-text {
+    100% {
+      color: rgba(34, 34, 34, 0);
+    }
+  }
+`;
+
 export const HeyEmoji = styled(Emoji)`
   display: inline-block;
   min-width: 40px;

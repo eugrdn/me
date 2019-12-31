@@ -1,12 +1,12 @@
 import React from 'react';
 import {isMobile} from 'react-device-detect';
 import Emoji from '../../../../components/emoji';
-import {Container, Greeting, HeyEmoji, Info, JobTitle} from './atoms';
+import {Container, Greeting, HeyEmoji, Info, JobTitle, LocationEmoji} from './atoms';
 
 const name = "I'm Evgeny";
 const jobTitle = 'Software Engineer';
 
-const RU = <Emoji symbol="🇷🇺" label="russia" fallback=" Russia." />;
+const RU = <LocationEmoji symbol="🇷🇺" label="russia" fallback=" Russia." />;
 const World = <Emoji symbol="🌎" label="world" fallback=" world." />;
 const Developer = <Emoji symbol="👨🏼‍💻" label="developer" fallback="." />;
 const Wave = <HeyEmoji symbol="👋🏼" label="waving hand" />;
@@ -18,7 +18,7 @@ export default ({className}) => (
         <Greeting>Hey{Wave}</Greeting>
         <Greeting>{name}</Greeting>
         <JobTitle>{jobTitle}</JobTitle>
-        <Info>Based in{RU}</Info>
+        <Info>Currently in{RU}</Info>
         <Info>Travelling the{World}</Info>
         <Info>Work globally{Developer}</Info>
       </>
@@ -29,7 +29,7 @@ export default ({className}) => (
         </Greeting>
         <JobTitle>{jobTitle}</JobTitle>
         <Info>
-          Based in{RU} Travelling the{World} Work globally{Developer}
+          Currently in{RU} Travelling the{World} Work globally{Developer}
         </Info>
       </>
     )}
