@@ -82,7 +82,7 @@ const Post = ({
       <small>{getDateDay(date)}</small>
     </PostDate>
     <div>
-      <Link to={slug}>{title}</Link>
+      <Link to={`/blog/${slug}`}>{title}</Link>
     </div>
   </li>
 );
