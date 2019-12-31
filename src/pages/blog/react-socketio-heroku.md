@@ -9,7 +9,7 @@ I will describe the process of deploying an app, where the server and the client
 
 **NOTE:** _In this tutorial, I'll be using yarn as a package manager and the latest Node.js version. Also, you should install Heroku CLI to enable the project deploying from the terminal console._
 
-![Cover](/blog/react-socketio-heroku/cover.png)
+![Preview](/blog/react-socketio-heroku/preview.png)
 
 ## Let's get started!
 

@@ -3,6 +3,7 @@ import {graphql} from 'gatsby';
 import Article from '../article';
 import Link from '../nav-link';
 import SEO from '../seo';
+import {getBlogRelPath} from '../../utils/blog-path';
 import {PageLayout} from './';
 import {PageNavigation} from './atoms';
 
@@ -28,11 +29,11 @@ export default ({
     <SEO title={frontmatter.title} />
     <Article title={frontmatter.title} date={frontmatter.date} html={html} />
     <PageNavigation>
-      {prev && <Link to={`/blog/${prev.fields.slug}`}>&lt;&lt;</Link>}
+      {prev && <Link to={getBlogRelPath(prev.fields.slug)}>&lt;&lt;</Link>}
       <span>&nbsp;&middot;&nbsp;</span>
       <Link to="/">Home</Link>
       <span>&nbsp;&middot;&nbsp;</span>
-      {next && <Link to={`/blog/${next.fields.slug}`}>&gt;&gt;</Link>}
+      {next && <Link to={getBlogRelPath(next.fields.slug)}>&gt;&gt;</Link>}
     </PageNavigation>
   </PageLayout>
 );

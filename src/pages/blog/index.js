@@ -6,6 +6,7 @@ import {PageLayout} from '../../components/layout';
 import Link from '../../components/nav-link';
 import Section from '../../components/section';
 import SEO from '../../components/seo';
+import {getBlogRelPath} from '../../utils/blog-path';
 
 export const query = graphql`
   query {
@@ -82,7 +83,7 @@ const Post = ({
       <small>{getDateDay(date)}</small>
     </PostDate>
     <div>
-      <Link to={`/blog/${slug}`}>{title}</Link>
+      <Link to={getBlogRelPath(slug)}>{title}</Link>
     </div>
   </li>
 );

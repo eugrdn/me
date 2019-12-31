@@ -1,5 +1,6 @@
 const path = require('path');
 const {createFilePath} = require('gatsby-source-filesystem');
+const {getBlogRelPath} = require('./src/utils/blog-path');
 
 exports.createPages = ({actions: {createPage}, graphql}) =>
   graphql(`
@@ -25,7 +26,7 @@ exports.createPages = ({actions: {createPage}, graphql}) =>
     const posts = data.allMarkdownRemark.edges;
     posts.forEach(({node}, index) =>
       createPage({
-        path: `blog/${node.fields.slug}`,
+        path: getBlogRelPath(node.fields.slug),
         component: path.resolve('src/components/layout/post.js'),
         context: {
           slug: node.fields.slug,
