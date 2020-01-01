@@ -86,7 +86,6 @@ module.exports = {
             `,
             output: '/rss.xml',
             title: "Software Engineer Evgeny Rodin's site RSS Feed",
-            match: '^/blog/',
           },
         ],
       },
