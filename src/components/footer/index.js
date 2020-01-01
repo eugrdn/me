@@ -44,4 +44,8 @@ const Footer = styled.div`
     border: none;
     font-weight: bold;
   }
+
+  @media (min-width: 1900px) {
+    width: 400px;
+  }
 `;

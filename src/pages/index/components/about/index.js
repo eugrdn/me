@@ -18,9 +18,9 @@ export default ({className}) => (
         <Greeting>Hey{Wave}</Greeting>
         <Greeting>{name}</Greeting>
         <JobTitle>{jobTitle}</JobTitle>
-        <Info>Currently in{RU}</Info>
         <Info>Travelling the{World}</Info>
         <Info>Work globally{Developer}</Info>
+        <Info>Currently in{RU}</Info>
       </>
     ) : (
       <>
@@ -29,7 +29,7 @@ export default ({className}) => (
         </Greeting>
         <JobTitle>{jobTitle}</JobTitle>
         <Info>
-          Currently in{RU} Travelling the{World} Work globally{Developer}
+          Travelling the{World} Work globally{Developer} Currently in{RU}
         </Info>
       </>
     )}
