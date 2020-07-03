@@ -22,7 +22,7 @@ export default ({className}) => {
   return (
     <Footer className={className}>
       <div>
-        &copy; 2019-{new Date().getFullYear()} <b>{author}</b>
+        &copy; 2017-{new Date().getFullYear()} <b>{author}</b>
       </div>
       <div>
         <small>

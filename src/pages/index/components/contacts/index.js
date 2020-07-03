@@ -7,7 +7,10 @@ import * as Atoms from './atoms';
 export default ({className}) => (
   <Atoms.Contacts className={className}>
     <p>
-      Here is my <Link to="/blog">Blog</Link>
+      Here is my{' '}
+      <Link to="/blog" style={{textDecoration: 'line-through'}}>
+        Blog
+      </Link>
       {!isMobile && ' where I occasionally write'}
     </p>
     <Atoms.FindMe>Find and contact me via</Atoms.FindMe>
