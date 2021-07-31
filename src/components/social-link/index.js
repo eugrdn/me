@@ -16,10 +16,7 @@ const meta = {
   cv: {to: '/cv.pdf'},
   linkedin: {to: 'https://www.linkedin.com/in/eugrdn'},
   github: {to: 'https://github.com/eugrdn'},
-  twitter: {to: 'https://twitter.com/eugrdn'},
-  telegram: {to: 'https://t.me/eugrdn'},
   instagram: {to: 'https://www.instagram.com/eugrdn'},
-  goodreads: {to: 'https://goodreads.com/eugrdn'},
 };
 
 export const icons = Object.keys(meta);
