@@ -55,6 +55,9 @@ const Avatar = styled.div`
   a,
   img,
   .gatsby-image-wrapper {
+    & > div {
+      padding: 0 !important;
+    }
     ${({size}) =>
       size
         ? css`
